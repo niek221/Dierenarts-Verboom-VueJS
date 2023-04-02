@@ -95,17 +95,16 @@
     <div class="mobile-nav" :class="{ 'is-active': isActive }" :style="{ overflow: isActive ? 'hidden' : 'auto' }">
 
       <div class="mobile-nav-second">
-        <router-link to="/" exact class="nav-link" active-class="a-active">Home</router-link>
-        <router-link to="/over" exact class="nav-link" active-class="a-active">Over ons</router-link>
-        <router-link to="/bijsluiters" exact class="nav-link" active-class="a-active">Bijsluiters</router-link>
-        <router-link to="/hillsvoordeel" exact class="nav-link" active-class="a-active">Hill's voordeel</router-link>
-        <router-link to="/duiven" exact class="nav-link" active-class="a-active">Duiven</router-link>
-        <router-link to="/contact" exact class="nav-link" active-class="a-active">Contact</router-link>
+        <router-link to="/" exact class="nav-link" active-class="a-active" @click="closeMenu">Home</router-link>
+        <router-link to="/over" exact class="nav-link" active-class="a-active" @click="closeMenu">Over ons</router-link>
+        <router-link to="/bijsluiters" exact class="nav-link" active-class="a-active" id="colorElement" ref="colorElement" @click="closeMenu">Bijsluiters</router-link> 
+        <router-link to="/hillsvoordeel" exact class="nav-link" active-class="a-active" @click="closeMenu">Hill's voordeel</router-link>
+        <router-link to="/duiven" exact class="nav-link" active-class="a-active" @click="closeMenu">Duiven</router-link>
+        <router-link to="/contact" exact class="nav-link" active-class="a-active" @click="closeMenu">Contact</router-link>
       </div>
 
       <div class="under-section">
           <p class="copyright-mb" id="copyright-mb">&copy; {{ currentYear }} Dierenarts Verboom</p>
-          <p class="made-by">Made by <a href="#">Niek</a></p>
       </div>
 
     </div>
@@ -113,20 +112,41 @@
 
 <script>
 export default {
-    name: 'Header',
-    data() {
-        return {
-            isActive: false,
-            currentYear: new Date().getFullYear(),
-        }
+  name: 'Header',
+  data() {
+    return {
+      isActive: false,
+      currentYear: new Date().getFullYear(),
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isActive = !this.isActive;
+      document.body.style.overflow = this.isActive ? 'hidden' : 'auto';
+      window.scrollTo(0, 0);
     },
-    methods: {
-        toggleMenu() {
-            this.isActive = !this.isActive;
-            document.body.style.overflow = this.isActive ? 'hidden' : 'auto';
-        },
+    closeMenu() {
+      this.isActive = false;
+      document.body.style.overflow = 'auto';
+      window.scrollTo({ top: 0 });
     },
-}
+  },
+  computed: {
+    isOnMyRoute() {
+      const colorElement = this.$refs.Header.$refs.colorElement;
+      if (this.$route.path.includes('/bijsluiters')) {
+        colorElement.style.color = 'red';
+      } else {
+        colorElement.style.color = 'black';
+      }
+    },
+  },
+  created() {
+    this.$router.afterEach(() => {
+      this.isOnMyRoute();
+    });
+  },
+};
 </script>
 
 <style scoped>
@@ -203,6 +223,8 @@ export default {
     background: none;
     outline: none;
     border: none;
+
+    animation: fadeIn 0.3s;
 }
 
 .hamburger.is-active > .bar {
@@ -273,7 +295,7 @@ header, .header-container, .sub-header {
 .mobile-nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     
     position: fixed;
     top: 108px;
@@ -287,6 +309,44 @@ header, .header-container, .sub-header {
     z-index: 1;
     
     transition: 0.3s;
+
+    min-height: 100vh;
+}
+
+@media (min-height: 600px) {
+    .mobile-nav {
+        gap: 30px;
+    }
+}
+
+@media (min-height: 650px) {
+    .mobile-nav {
+        gap: 60px;
+    }
+}
+
+@media (min-height: 700px) {
+    .mobile-nav {
+        gap: 110px;
+    }
+}
+
+@media (min-height: 750px) {
+    .mobile-nav {
+        gap: 160px;
+    }
+}
+
+@media (min-height: 800px) {
+    .mobile-nav {
+        gap: 210px;
+    }
+}
+
+@media (min-height: 850px) {
+    .mobile-nav {
+        gap: 260px;
+    }
 }
 
 .mobile-nav-second {
@@ -364,6 +424,8 @@ header, .header-container, .sub-header {
     .mobile-nav.is-active {
         top: 152px;
         left: 0;
+
+        min-height: 100vh;
     } 
 
     .mobile-nav-second {

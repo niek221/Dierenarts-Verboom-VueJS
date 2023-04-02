@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     /* Main Section */
 
     main > .container-main {
@@ -271,7 +271,7 @@ export default {
         }
 
         .container-hills > .text-container-1 > h1 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
         
             margin-bottom: 15px;

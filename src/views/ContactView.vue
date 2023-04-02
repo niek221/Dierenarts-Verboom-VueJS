@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     /* Main Section */
 
     main > .container-main {
@@ -80,19 +80,20 @@ export default {
         margin-top: 25px;
         margin-inline: 35px;
 
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
     .container-about > h1 {
         font-size: 18px;
         font-weight: 600;
 
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .container-about {
         display: flex;
         flex-direction: column;
+        gap: 0px;
     }
 
     .container-contact {
@@ -129,7 +130,7 @@ export default {
             margin-left: 75px;
             margin-right: 45px;
         
-            padding-bottom: 100px;
+            padding-bottom: 200px;
         }
         
         .container-about {
@@ -167,12 +168,19 @@ export default {
             margin-left: 150px;
             margin-right: 45px;
         
-            padding-bottom: 100px;
+            padding-bottom: 250px;
         }
 
         .container-about {
             display: flex;
             flex-direction: column;
+        }
+
+        .container-about > h1 {
+            font-size: 20px;
+            font-weight: 600;
+        
+            margin-bottom: 15px;
         }
     }
 </style>

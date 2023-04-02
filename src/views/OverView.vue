@@ -41,7 +41,7 @@
 
             </div>
 
-            <div class="container-image">
+            <div class="container-image-over">
                 <img src="../assets/over-desktop.png">
             </div>
         </div>
@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   /* Main Section */
 
     main > .container-main {
@@ -137,14 +137,14 @@ export default {
         font-weight: 400;
     }
 
-    .container-image {
+    .container-image-over {
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
 
-    .container-image > img {
+    .container-image-over > img {
         width: 200px;
         height: 260px;
     }
@@ -169,7 +169,7 @@ export default {
             width: 100%;
         }
 
-        .container-image > img {
+        .container-image-over > img {
             width: 302px;
             height: 393px;
         }
@@ -190,7 +190,7 @@ export default {
             padding-bottom: 100px;
         }
         
-        .container-image {
+        .container-image-over {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -219,17 +219,12 @@ export default {
             width: 100%;
         }
         
-        .container-image {
+        .container-image-over {
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 200px;
         }
-        
-        /* .container-image > img {
-            width: 240px;
-            height: 240px;
-        } */
     }
 
     @media (min-width: 1400px) { 
@@ -241,7 +236,7 @@ export default {
         }
 
         .container-about > .text-container-1 > h1 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
         
             margin-bottom: 15px;
@@ -280,18 +275,13 @@ export default {
             padding-bottom: 100px;
         }
         
-        .container-image {
+        .container-image-over {
             display: flex;
             flex-direction: column;
             justify-content: center;
 
             margin-right: 150px;
         }
-        
-        /* .container-image > img {
-            width: 250px;
-            height: 250px;
-        } */
     }
 
   /* Whatsapp Button */

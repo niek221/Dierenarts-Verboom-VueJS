@@ -2,6 +2,9 @@
   <router-view/>
 </template>
 
+<script>
+</script>
+
 <style>
 * {
     margin: 0;
@@ -30,4 +33,41 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+/* Whatsapp Button */
+
+.whatsapp {
+        z-index: 3;
+    }
+
+    .whatsapp-img {
+        height: 50px;
+        width: 50px;
+
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+
+        border-radius: 40px;
+    }
+
+    .whatsapp-img:hover {
+        transform: scale(1.2);
+        transition: 0.3s linear;
+    }
+
+    @media (min-width: 560px) {
+
+        .whatsapp-img {
+            height: 75px;
+            width: 75px;
+
+            position: fixed;
+            right: 30px;
+            bottom: 50px;
+
+            animation: fadeIn 0.35s;
+        }
+    }
+ 
 </style>

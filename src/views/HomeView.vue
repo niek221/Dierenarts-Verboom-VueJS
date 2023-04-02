@@ -2,7 +2,11 @@
     <Header/>
 
     <main>
-
+        <div class="container-frontpage">
+            <!-- <img src="../assets/foto-temp.png">     -->
+            <img src="../assets/voorkant.jpg">    
+            <!-- <img src="../assets/foto-temp.png">     -->
+        </div>
     </main>
     
     <Footer/>
@@ -12,7 +16,7 @@
     </a>
 </template>
 
-<script>
+<script scoped>
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
@@ -26,48 +30,55 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   /* Main Section */
 
-  main {
-      min-height: 700px;
+    main {
+        min-height: 700px;
 
-      animation: fadeIn 0.25s;
-  }
+        animation: fadeIn 0.25s;
+    }
+
+    .container-frontpage {
+        display: flex;
+        justify-content: center;
+    }
+
+    
 
   /* Whatsapp Button */
 
-.whatsapp {
-    z-index: 3;
-}
-
-.whatsapp-img {
-    height: 50px;
-    width: 50px;
-
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-
-    border-radius: 40px;
-}
-
-.whatsapp-img:hover {
-    transform: scale(1.2);
-    transition: 0.3s linear;
-}
-
-@media (min-width: 560px) {
+    .whatsapp {
+        z-index: 3;
+    }
 
     .whatsapp-img {
-        height: 75px;
-        width: 75px;
+        height: 50px;
+        width: 50px;
 
         position: fixed;
-        right: 30px;
-        bottom: 50px;
+        right: 20px;
+        bottom: 20px;
 
-        animation: fadeIn 0.35s;
+        border-radius: 40px;
     }
-}
+
+    .whatsapp-img:hover {
+        transform: scale(1.2);
+        transition: 0.3s linear;
+    }
+
+    @media (min-width: 560px) {
+
+        .whatsapp-img {
+            height: 75px;
+            width: 75px;
+
+            position: fixed;
+            right: 30px;
+            bottom: 50px;
+
+            animation: fadeIn 0.35s;
+        }
+    }
 </style>

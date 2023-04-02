@@ -2,37 +2,37 @@
     <Header/>
 
     <main>
-        <div class="container-bijsluiters">
+        <div class="container-main">
             <h1>Bijsluiters</h1>
 
             <div class="container-above">
                 <div class="animal">
-                    <a href="./bijsluiters/hond.html">
+                    <router-link to="/bijsluiters/hond" exact class="nav-link">
                         <img src="../assets/hond.png">
                         <h2>Hond</h2>
-                    </a>
+                    </router-link>
                 </div>
                 
                 <div class="animal">
-                    <a href="">
+                    <router-link to="bijsluiters/kat" exact class="nav-link">
                         <img src="../assets/kat.png">
                         <h2>Kat</h2>
-                    </a>
+                    </router-link>
                 </div>
             </div>
 
             <div class="container-below">
                 <div class="animal">
-                    <a href="">
+                    <router-link to="/bijsluiterskonijn" exact class="nav-link">
                         <img src="../assets/konijn.png">
                         <h2>Konijn</h2>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="animal">
-                    <a href="">
+                    <router-link to="/bijsluitersduif" exact class="nav-link">
                         <img src="../assets/duif.png">
                         <h2>Duif</h2>
-                    </a>
+                    </router-link>
                 </div>
             </div>
 
@@ -56,24 +56,43 @@ export default {
   components: {
     Header,
     Footer
-  }
+  },
 }
 </script>
 
-<style>
+<style scoped>
     /* Main Section */
 
-    main {
-        min-height: 560px;
-    }
-
-    .container-bijsluiters {
+    .container-main {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
 
-        margin-top: 50px;
+        margin-top: 25px;
+        margin-inline: 35px;
+
+        padding-bottom: 200px;
+    }
+
+    @media (min-width: 940px) {
+        
+        main > .container-main {
+            margin-top: 45px;
+            margin-inline: 45px;
+        
+            padding-bottom: 100px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        
+        main > .container-main {
+            margin-top: 65px;
+            margin-inline: 45px;
+        
+            padding-bottom: 300px;
+        }
     }
 
     .container-above {
@@ -86,7 +105,6 @@ export default {
         margin-bottom: 10px;
     }
 
-
     .container-below {
         display: flex;
         flex-direction: row;
@@ -96,7 +114,7 @@ export default {
         margin-top: 10px;
     }
 
-    .container-bijsluiters > h1 {
+    .container-main > h1 {
         font-size: 18px;
         font-weight: 600;
     }
@@ -128,39 +146,13 @@ export default {
         margin-top: 5px;
     }
 
-  /* Whatsapp Button */
-
-    .whatsapp {
-        z-index: 3;
-    }
-
-    .whatsapp-img {
-        height: 50px;
-        width: 50px;
-
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-
-        border-radius: 40px;
-    }
-
-    .whatsapp-img:hover {
-        transform: scale(1.2);
-        transition: 0.3s linear;
-    }
-
-    @media (min-width: 560px) {
-
-        .whatsapp-img {
-            height: 75px;
-            width: 75px;
-
-            position: fixed;
-            right: 30px;
-            bottom: 50px;
-
-            animation: fadeIn 0.35s;
+    @media (min-width: 1400px) {
+        .container-main > h1 {
+            font-size: 20px;
+            font-weight: 600;
+        
+            margin-bottom: 15px;
         }
     }
+
 </style>
