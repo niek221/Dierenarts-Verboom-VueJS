@@ -40,21 +40,21 @@ export default {
       window.scrollTo({ top: 0 });
     },
   },
-//   computed: {
-//     isOnMyRoute() {
-//       const colorElement = this.$refs.Header.$refs.colorElement;
-//       if (this.$route.path.includes('/bijsluiters')) {
-//         colorElement.style.color = 'red';
-//       } else {
-//         colorElement.style.color = 'black';
-//       }
-//     },
-//   },
-//   created() {
-//     this.$router.afterEach(() => {
-//       this.isOnMyRoute();
-//     });
-//   },
+  // computed: {
+  //   isOnMyRoute() {
+  //     const colorElement = this.$refs.Header.$refs.colorElement;
+  //     if (this.$route.path.includes('/bijsluiters')) {
+  //       colorElement.style.color = 'red';
+  //     } else {
+  //       colorElement.style.color = 'black';
+  //     }
+  //   },
+  // },
+  // created() {
+  //   this.$router.afterEach(() => {
+  //     this.isOnMyRoute();
+  //   });
+  // },
 };
 
 </script>

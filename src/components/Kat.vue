@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       bijsluiters: [],
-      jsonUrl: 'https://dierenartsverboom.nl/bijsluiters-kat.json', 
+      jsonUrl: 'http://localhost:8080/bijsluiters-kat.json', 
       // Veranderen bij build
     };
   },

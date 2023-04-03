@@ -133,12 +133,13 @@ export default {
   },
   computed: {
     isOnMyRoute() {
-      const colorElement = this.$refs.Header.$refs.colorElement;
+      const colorElement = this.$refs.colorElement;
       if (this.$route.path.includes('/bijsluiters')) {
         colorElement.style.color = 'red';
       } else {
         colorElement.style.color = 'black';
       }
+      return null;
     },
   },
   created() {
@@ -148,6 +149,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 /* Font Import */

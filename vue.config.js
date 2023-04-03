@@ -1,5 +1,11 @@
 // module.exports = {
 //     devServer: {
+//       https: true
+//     }
+//   }
+
+// module.exports = {
+//     devServer: {
 //       before: (app, server) => {
 //         const axios = require('axios');
 //         const jsonUrl = 'http://localhost:8080/medicijnen-kat.json';
