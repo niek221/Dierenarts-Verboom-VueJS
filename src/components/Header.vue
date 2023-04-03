@@ -399,11 +399,12 @@ header, .header-container, .sub-header {
     gap: 5px;
 
     width: 100%;
+    height: 100%;
     border-top: solid 6px var(--main-green);
 }
 
 .copyright-mb {
-    margin-top: 20px;
+    margin-top: 40px;
 
     font-size: 14px;
     font-weight: 400;

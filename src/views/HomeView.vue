@@ -44,7 +44,27 @@ export default {
         justify-content: center;
     }
 
-    
+    @media (min-width: 370px) {
+        .container-frontpage > img {
+            width: 390px;
+            height: 277.97px;
+        }
+    }
+
+    @media (min-width: 390px) {
+        .container-frontpage > img {
+            width: 390px;
+            height: 293px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .container-frontpage > img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
 
   /* Whatsapp Button */
 

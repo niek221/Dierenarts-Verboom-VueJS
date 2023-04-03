@@ -38,7 +38,7 @@ name: 'Hond',
 data() {
     return {
     bijsluiters: [],
-    jsonUrl: 'http://localhost:8080/bijsluiters-hond.json', 
+    jsonUrl: 'https://dierenartsverboom.nl/bijsluiters-hond.json', 
     // Veranderen bij build
     };
 },

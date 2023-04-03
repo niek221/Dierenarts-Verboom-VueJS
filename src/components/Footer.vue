@@ -13,12 +13,12 @@
 
                 <div class="instagram">
                     <img src="../assets/instagram.png" alt="ig">
-                    <a href="instagram.com/dierenartspraktijkverboom/">dierenartspraktijkverboom</a>
+                    <a href="https://instagram.com/dierenartspraktijkverboom/">dierenartspraktijkverboom</a>
                 </div>
 
             </div>
 
-            <p class="copyright" id="copyright"></p>
+            <p class="copyright" id="copyright">&copy; {{ currentYear }} Dierenarts Verboom</p>
             
         </div>
 
@@ -27,7 +27,14 @@
   
   <script>
   export default {
-      name: 'Footer'
+      name: 'Footer',
+
+      data() {
+        return {
+      isActive: false,
+      currentYear: new Date().getFullYear(),
+    };
+  },
   }
   </script>
   

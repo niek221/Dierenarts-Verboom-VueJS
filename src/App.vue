@@ -3,6 +3,12 @@
 </template>
 
 <script>
+export default {
+  name: 'App',
+  created() {
+    document.title = 'Dierenarts Verboom';
+  },
+};
 </script>
 
 <style>
